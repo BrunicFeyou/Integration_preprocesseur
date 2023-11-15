@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+.card_ingredients .desc_card_ingredients button, .pres_salade .plus, nav .btn_commander {
+  border-style: none;
+  font-size: 18px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.card_menu_prix_title {
+  font-weight: 700;
+  font-size: 2.5em;
+  color: #B2D234;
+}
+
+.card_menu_prix, .card_ingredients, .pres_mangoo {
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+nav .right_side_menu {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  align-items: center;
+}
+nav .list_menu {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  list-style: none;
+  color: #fff;
+}
+nav .btn_commander {
+  background-color: #fff;
+  color: #B2D234;
+  font-weight: 600;
+  padding: 9px 30px 9px 30px;
+  border-radius: 5px;
+}
+
+.pres_mangoo {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/Header_back.png");
+  position: relative;
+  z-index: 0;
+  top: 0px;
+}
+
+.overlay {
+  background: linear-gradient(to right, rgba(96, 160, 216, 0.62), rgba(179, 210, 52, 0.62));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.title_resto {
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title_resto h1 {
+  font-size: 5em;
+  color: #fff;
+}
+.title_resto p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.icons_media {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+  color: black;
+  position: absolute;
+  bottom: -8px;
+  padding: 46px;
+}
+
+.pres_salade {
+  width: 100%;
+  height: 87vh;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  background: url("/images/61842.png");
+  position: relative;
+}
+.pres_salade .text_salade {
+  flex-grow: 1;
+  margin: 20px 0 20px 25px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.pres_salade .text_salade h2 {
+  color: #B2D234;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.pres_salade .text_salade p {
+  color: #606060;
+  font-size: 18px;
+  margin: 20px 0;
+}
+.pres_salade img {
+  flex-grow: 1;
+  object-fit: cover;
+}
+.pres_salade .plus {
+  background-color: #B2D234;
+  color: #fff;
+  padding: 14px 60px 14px 60px;
+}
+
+.card_ingredients {
+  width: 100%;
+  height: 100vh;
+  background: url("/images/ismael-trevino-NDyuR4Huig8-unsplash.png");
+  display: flex;
+  justify-content: flex-end;
+}
+.card_ingredients .desc_card_ingredients {
+  width: 612px;
+  height: auto;
+  background-color: rgba(178, 210, 52, 0.8);
+  background-visible: 0.5;
+  margin: 54px 154px 50px 0;
+  text-align: center;
+  padding: 37px 68px 48px 68px;
+}
+.card_ingredients .desc_card_ingredients button {
+  background-color: #fff;
+  color: #B2D234;
+  padding: 14px 60px 14px 60px;
+  margin-bottom: 40px;
+}
+.card_ingredients .title_card_ingredients {
+  color: #fff;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  font-weight: 700;
+  width: 100%;
+}
+.card_ingredients .desc_ingredients {
+  margin-bottom: 40px;
+  width: 100%;
+  color: #fff;
+}
+
+.card_menu_prix {
+  width: 100%;
+  height: 120vh;
+  text-align: center;
+  background: url("/images/pattern.png");
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.contain_card_prix_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  justify-content: center;
+  align-content: center;
+  width: 800px;
+  height: auto;
+  margin-top: 71px;
+  margin-bottom: 40px;
+}
+
+.card_menu_prix_title {
+  font-size: 2em;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.card_menu_prix_desc {
+  text-align: center;
+}
+
+.pres_price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+}
+
+.pres_menu_price {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.card_pres_menu_price {
+  padding: 0 0 0 40px;
+  width: 527px;
+}
+
+.card_pres_menu_price > div {
+  display: flex;
+  justify-content: space-between;
+}
+.card_pres_menu_price > div h3 {
+  color: #B2D234;
+}
+
+/*# sourceMappingURL=style.css.map */

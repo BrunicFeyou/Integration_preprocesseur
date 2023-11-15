@@ -1,0 +1,259 @@
+// main.scss
+
+@use  'abstracts/variables' as * 
+@use  'abstracts/mixins' as * 
+@use  'base/reset' as * 
+@use  'base/typography' as * 
+@use  'layout/header' as * 
+@use  'layout/footer' as * 
+@use  'components/buttons' as * 
+@use  'components/caroussels' as * 
+@use  'pages/home' as * 
+@use  'pages/contact' as * 
+@use  'themes/themes' as * 
+@use  'themes/admin' as * 
+@use  'vendors/bootstrap' as * 
+//@use  'images' as *
+
+
+%buttons 
+    border-style: none 
+    font-size: $font-size_normal
+    border-radius: 5px
+    font-weight: $font_weight_medium
+
+%title 
+    font-weight: $font_weight_medium
+    font-size: 2.5em
+    color: $color_green
+
+%background
+    background-size: cover
+    background-position: center
+
+    
+body
+    position: relative
+nav 
+    width: 100%
+    height: 100px
+    background-color: rgb(255, 255, 255, 0)
+    color: black
+    display: flex
+    justify-content: space-between
+    align-items: center
+    //margin: 0 40px 0 20px
+    padding: 0 20px 0 20px
+    position: fixed
+    top: 0
+    z-index: 2
+    
+        
+
+    .right_side_menu 
+        @include display2(flex, row, 70px)
+        align-items: center
+        
+
+
+    .list_menu 
+        flex 
+        @include display2(flex, row, 50px)
+        list-style: none
+        color: $color_primary
+    
+    .btn_commander
+        background-color: $color_primary 
+        color: $color_green 
+        font-weight: $font_weight_normal
+        @extend %buttons 
+        padding: 9px 30px 9px 30px
+        border-radius: 5px
+
+
+
+.pres_mangoo 
+    width: 100%
+    height: 100vh
+    background-image: url('/images/Header_back.png')
+    @extend %background
+    position: relative
+    z-index: 0
+    top: 0px
+
+.overlay
+    background: linear-gradient(to right, rgba(96, 160, 216, 0.62), rgba(179, 210, 52, 0.62))
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: -1
+
+.title_resto 
+    font-size: $font-size_normal
+    width: 100%
+    height: 100%
+    @include display (flex, center, center, column)
+
+    & h1 
+        font-size: 5em
+        color: $color_primary
+
+
+    & p 
+        font-size: $font-size_normal
+        color: $color_primary
+
+.icons_media
+    width: 100%
+    height: auto
+    @include display2(flex, row, 10px)
+    justify-content: flex-end
+    color: black
+    position: absolute
+    bottom: -8px
+    padding: 46px
+    
+.pres_salade
+    width: 100%
+    height: 87vh
+    @include display2(flex, row, 0px)
+    background: url('/images/61842.png')
+    
+    position: relative
+
+    .text_salade
+        flex-grow: 1
+        //position: absolute
+        margin: 20px 0 20px 25px
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+
+
+        & h2 
+            color: $color_green
+            font-size: 2em
+            margin-bottom: 20px
+        & p 
+            color: $color_secondary
+            font-size: $font-size_normal
+            margin: 20px 0
+
+    & img
+        flex-grow: 1
+        object-fit: cover
+    
+    .plus 
+        @extend %buttons
+        background-color:  $color_green
+        color:$color_primary
+        padding: 14px 60px 14px 60px
+
+
+.card_ingredients
+    width: 100%
+    height: 100vh
+    background: url('/images/ismael-trevino-NDyuR4Huig8-unsplash.png')
+    @extend %background
+    display: flex
+    justify-content: flex-end
+
+    .desc_card_ingredients
+        width: 612px
+        height: auto
+        background-color: rgba($color_green, 0.8) 
+        background-visible: 0.5
+        margin: 54px 154px 50px 0
+        text-align: center
+        padding: 37px 68px 48px 68px
+
+        & button 
+            @extend %buttons
+            background-color: $color_primary
+            color: $color_green
+            padding: 14px 60px 14px 60px
+            margin-bottom: 40px
+        
+
+    .title_card_ingredients
+        color: $color_primary
+        font-size: 2.5em
+        margin-bottom: 40px 
+        font-weight: $font_weight_medium
+        width: 100%
+
+    .desc_ingredients
+        margin-bottom: 40px
+        width: 100%
+        color: $color_primary
+
+
+.card_menu_prix
+    width: 100%
+    height: 120vh
+    text-align: center
+    background: url('/images/pattern.png')
+    @extend %background
+    display: flex
+    flex-direction: column
+    align-content: center
+    align-items: center
+
+
+.contain_card_prix_desc
+     @include display2(flex, column, 0px)
+     justify-content: center
+     align-content: center
+     width: 800px
+     height: auto
+     margin-top: 71px 
+     margin-bottom: 40px
+
+.card_menu_prix_title
+    @extend %title
+    font-size: 2em
+    width: 100%
+    margin-bottom: 30px
+    
+    
+.card_menu_prix_desc
+    
+    text-align: center
+
+.pres_price 
+    display: grid 
+    grid-template-columns:1fr 1fr
+    width: 100%
+    height: 100%
+
+.pres_menu_price 
+    display: grid
+    grid-template-columns: 1fr
+    width: 100%
+
+.card_pres_menu_price 
+    padding: 0 0 0 40px
+    width: 527px
+
+.card_pres_menu_price > div 
+    display: flex
+    justify-content: space-between
+    & h3 
+        color: $color_green
+    
+
+
+
+         
+
+
+
+    
+    
+
+
+
+
+    
