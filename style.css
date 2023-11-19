@@ -5,7 +5,7 @@
   font-family: "poppins", sans-serif;
 }
 
-.card_ingredients .desc_card_ingredients button, .pres_salade .plus, nav .btn_commander {
+.infos_user button, .CTA button, .card_ingredients .desc_card_ingredients button, .pres_salade .plus, nav .btn_commander {
   border-style: none;
   font-size: 18px;
   border-radius: 5px;
@@ -18,9 +18,11 @@
   color: #B2D234;
 }
 
-.card_menu_prix, .card_ingredients, .pres_mangoo {
+.display_display, .card_menu_prix, .card_ingredients, .pres_mangoo {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
 }
 
 body {
@@ -150,7 +152,7 @@ nav .btn_commander {
 .card_ingredients {
   width: 100%;
   height: 100vh;
-  background: url("/images/ismael-trevino-NDyuR4Huig8-unsplash.png");
+  background-image: url("/images/ismael-trevino-NDyuR4Huig8-unsplash.png");
   display: flex;
   justify-content: flex-end;
 }
@@ -161,7 +163,10 @@ nav .btn_commander {
   background-visible: 0.5;
   margin: 54px 154px 50px 0;
   text-align: center;
-  padding: 37px 68px 48px 68px;
+  padding: 0px 68px 0px 68px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .card_ingredients .desc_card_ingredients button {
   background-color: #fff;
@@ -185,14 +190,12 @@ nav .btn_commander {
 .card_menu_prix {
   width: 100%;
   height: 120vh;
-  text-align: center;
   background: url("/images/pattern.png");
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
 }
-
 .contain_card_prix_desc {
   display: flex;
   flex-direction: column;
@@ -209,6 +212,7 @@ nav .btn_commander {
   font-size: 2em;
   width: 100%;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .card_menu_prix_desc {
@@ -220,6 +224,7 @@ nav .btn_commander {
   grid-template-columns: 1fr 1fr;
   width: 100%;
   height: 100%;
+  margin-top: 47px;
 }
 
 .pres_menu_price {
@@ -229,16 +234,237 @@ nav .btn_commander {
 }
 
 .card_pres_menu_price {
-  padding: 0 0 0 40px;
-  width: 527px;
+  padding: 0 0 0 128px;
+  width: 100%;
+}
+.card_pres_menu_price p {
+  width: 275px;
+  color: #606060;
 }
 
 .card_pres_menu_price > div {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 .card_pres_menu_price > div h3 {
   color: #B2D234;
+}
+.card_pres_menu_price > div p {
+  font-weight: 700;
+  color: #B2D234;
+}
+
+.CTA {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 200px 0 0;
+}
+.CTA button {
+  background-color: #B2D234;
+  color: #fff;
+  padding: 14px 60px 14px 60px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.forces {
+  font-size: 52px;
+  rotate: -9deg;
+}
+.forces .forces_verte {
+  color: #B2D234;
+}
+.forces .forces_bleue {
+  color: #60A0D8;
+}
+
+.forces_texte {
+  width: 390px;
+  font-size: 1em;
+  text-align: center;
+}
+
+.display_display {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/louis-hansel-MlPD-AzZYMg-unsplash.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  gap: 20px;
+}
+
+.display {
+  flex-grow: 1;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2em;
+  align-items: center;
+  color: #fff;
+  margin: 0 0 10px 0;
+  margin: 30px;
+}
+.display > p {
+  font-weight: 700;
+  font-size: 52px;
+  margin-top: 24px;
+}
+.display.forces_vert {
+  background-color: rgba(178, 210, 52, 0.8);
+}
+.display.forces_bleu {
+  background-color: rgba(96, 160, 216, 0.8);
+}
+
+.display_liste_ingredients {
+  width: 100%;
+  height: auto;
+  gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.display_liste_ingredients p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.partager {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/61842.png");
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+}
+
+.img-salade-traits {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: columns;
+  position: relative;
+}
+.img-salade-traits img {
+  height: 524px;
+  width: 524px;
+}
+
+.traits1 {
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background-color: #fff;
+}
+
+.traits2 {
+  position: absolute;
+  width: 524px;
+  height: 6px;
+  background-color: #fff;
+}
+
+form {
+  width: 100%;
+  height: auto;
+  margin: 35px 0 35px 0;
+}
+form p:nth-child(1) {
+  font-size: 52px;
+  color: #B2D234;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+form p:nth-child(2) {
+  font-size: 18px;
+  color: #606060;
+  margin-bottom: 0px;
+  width: 526px;
+  margin-bottom: 28px;
+}
+
+.infos_user {
+  padding-right: 106px;
+}
+.infos_user button {
+  background-color: #B2D234;
+  color: #fff;
+  padding: 14px 60px 14px 60px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 20px;
+}
+
+.box_infos_identity {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.box_infos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #606060;
+  font-size: 18px;
+  flex-grow: 1;
+  margin-bottom: 25px;
+}
+.box_infos input {
+  border: 1px solid #d4d1d1;
+  height: 40px;
+}
+.box_infos label {
+  font-size: 18px;
+  color: #B2D234;
+}
+.box_infos.motivation > input {
+  height: 135px;
+}
+
+footer {
+  width: 100%;
+  height: 290px;
+  background-color: #B2D234;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footer_menu p {
+  color: #fff;
+  font-weight: 700;
+  font-size: 27px;
+  margin-bottom: 27px;
+}
+.footer_menu ul {
+  list-style: none;
+  color: #fff;
+  text-align: center;
+}
+.footer_menu li {
+  margin-bottom: 5px;
+}
+.footer_menu a {
+  text-decoration: none;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
