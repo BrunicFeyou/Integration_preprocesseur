@@ -1,2 +1,167 @@
 
 // Your code here
+
+@use  '../abstracts/mixins' as * 
+
+@use  '../abstracts/placeholders' as *
+
+@use  '../abstracts/variables' as * 
+
+
+body
+   
+nav 
+    width: 100%
+    height: 100px
+    background-color: rgb(255, 255, 255, 0)
+    color: black
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    //margin: 0 40px 0 20px
+    padding: 0 20px 0 20px
+    position: absolute
+    top: 0
+    z-index: 2 
+    margin: 10px 0 0 0
+    
+   
+        
+       
+    
+    
+    
+        
+
+    .right_side_menu 
+        @include display2(flex, row, 70px)
+        align-items: center
+        flex-wrap: wrap
+       
+
+        
+
+
+    .list_menuu
+        flex 
+        @include display2(flex, row, 50px)
+        list-style: none
+        color: $color_primary
+        font-size: $font-size_normal
+        flex-wrap: wrap
+       
+        li:nth-child(1)
+            &.active
+            position: relative
+            display: inline-block
+            
+           
+            &::after
+              content: ""
+              position: absolute
+              left: 25% 
+              bottom: 0
+              width: 50%  
+              border-bottom: 3px solid $color_primary
+                
+    
+    .btn_commander
+        background-color: $color_primary 
+        color: $color_green 
+        font-weight: $font_weight_normal
+        @extend %buttons 
+        padding: 9px 30px 9px 30px
+        border-radius: 5px
+
+
+
+.pres_mangoo 
+    width: 100%
+    height: 100vh
+    background-image: url('/images/Header_back.png')
+    @extend %background
+    position: relative
+    z-index: 0
+    top: 0px
+  
+    
+
+.overlay
+    background: linear-gradient(to right, rgba(96, 160, 216, 0.62), rgba(179, 210, 52, 0.62))
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: -1
+
+.title_resto 
+    font-size: $font-size_normal
+    width: 100%
+    height: 100%
+    @include display (flex, center, center, column)
+    
+
+    & h1 
+        font-size: 6.5em
+        color: $color_primary
+        
+
+
+
+
+    & p 
+        font-size: $font-size_medium
+        color: $color_primary
+        rotate: $rotate
+        position: absolute
+        top: 412.5px
+        right: 399px
+
+
+.icons_media
+    width: 100%
+    height: auto
+    @include display2(flex, row, 10px)
+    justify-content: flex-end
+    color: black
+    position: absolute
+    bottom: -8px
+    padding: 46px
+
+
+
+@media screen and (max-width: 376px)
+    nav 
+        flex-wrap: wrap
+        height: auto
+        justify-content: center
+        img 
+            width: 6em
+        .right_side_menu
+            justify-content: center
+            align-content: center
+            align-items: center
+            gap: 30px
+        .list_menuu
+            justify-content: center
+            align-content: center
+            align-items: center
+            margin-top: 5px
+        .btn_commander
+            padding: 5px 10px 5px 10px 
+
+          
+    
+    .title_resto h1
+        font-size: 4em
+
+    .title_resto p
+            font-size: 1.5em
+            right: 33px
+            top: 384px
+    
+    
+
+
+    
+       

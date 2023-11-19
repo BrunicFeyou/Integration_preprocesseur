@@ -1,10 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "poppins", sans-serif;
-}
-
 .infos_user button, .CTA button, .desc_card_ingredients button, .pres_salade .plus, nav .btn_commander {
   border-style: none;
   font-size: 18px;
@@ -25,8 +18,11 @@
   object-fit: cover;
 }
 
-body {
-  position: relative;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
 }
 
 nav {
@@ -49,20 +45,22 @@ nav .right_side_menu {
   flex-direction: row;
   gap: 70px;
   align-items: center;
+  flex-wrap: wrap;
 }
-nav .list_menu {
+nav .list_menuu {
   display: flex;
   flex-direction: row;
   gap: 50px;
   list-style: none;
   color: #fff;
   font-size: 18px;
+  flex-wrap: wrap;
 }
-nav .list_menu li:nth-child(1) {
+nav .list_menuu li:nth-child(1) {
   position: relative;
   display: inline-block;
 }
-nav .list_menu li:nth-child(1)::after {
+nav .list_menuu li:nth-child(1)::after {
   content: "";
   position: absolute;
   left: 25%;
@@ -130,6 +128,39 @@ nav .btn_commander {
   padding: 46px;
 }
 
+@media screen and (max-width: 376px) {
+  nav {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+  }
+  nav img {
+    width: 6em;
+  }
+  nav .right_side_menu {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  nav .list_menuu {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+  nav .btn_commander {
+    padding: 5px 10px 5px 10px;
+  }
+  .title_resto h1 {
+    font-size: 4em;
+  }
+  .title_resto p {
+    font-size: 1.5em;
+    right: 33px;
+    top: 384px;
+  }
+}
 .pres_salade {
   width: 100%;
   height: 100vh;
@@ -140,31 +171,10 @@ nav .btn_commander {
   z-index: -1;
   position: relative;
 }
-.pres_salade .text_salade {
-  width: 100%;
-  /* margin: 0px 20px 20px 25px */
-  margin-left: 145px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.pres_salade .text_salade h2 {
-  color: #B2D234;
-  font-size: 57.2px;
-  margin-bottom: 20px;
-}
-.pres_salade .text_salade p {
-  color: #606060;
-  font-size: 18px;
-  margin: 20px 0;
-  width: 500px;
-}
 .pres_salade img {
   object-fit: cover;
   position: absolute;
-  left: 630px;
+  left: 590px;
   bottom: -54px;
   z-index: 0;
 }
@@ -175,6 +185,53 @@ nav .btn_commander {
   margin-top: 45px;
 }
 
+.text_salade {
+  width: 100%;
+  /* margin: 0px 20px 20px 25px */
+  margin-left: 145px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.text_salade h2 {
+  color: #B2D234;
+  font-size: 57.2px;
+  margin-bottom: 20px;
+}
+.text_salade p {
+  color: #606060;
+  font-size: 18px;
+  margin: 20px 0;
+  width: 500px;
+}
+
+@media screen and (max-width: 376px) {
+  .text_salade {
+    margin-left: 10px;
+    justify-content: flex-start;
+    margin-top: 90px;
+  }
+  .text_salade h2 {
+    font-size: 34px;
+  }
+  .text_salade p {
+    font-size: 10px;
+    width: 300px;
+  }
+  .pres_salade .plus {
+    padding: 7px 30px 7px 30px;
+    z-index: 1;
+    margin-top: 5px;
+  }
+  .pres_salade img {
+    height: 300px;
+    width: 300px;
+    left: 77px;
+    bottom: -9px;
+  }
+}
 .card_ingredients {
   width: 100%;
   height: 100vh;
@@ -220,14 +277,27 @@ nav .btn_commander {
   color: #fff;
 }
 
+@media screen and (max-width: 376px) {
+  .desc_card_ingredients {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: rgba(178, 210, 52, 0.7);
+  }
+  .desc_card_ingredients .title_card_ingredients {
+    font-size: 2em;
+  }
+}
 .card_menu_prix {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background: url("/images/pattern.png");
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
+  padding-bottom: 10px;
 }
 .contain_card_prix_desc {
   display: flex;
@@ -322,6 +392,40 @@ nav .btn_commander {
   text-align: center;
 }
 
+@media screen and (max-width: 376px) {
+  .card_menu_prix_title {
+    font-size: 2em;
+  }
+  .card_menu_prix_desc {
+    width: 100%;
+    font-size: 9px;
+  }
+  .contain_card_prix_desc {
+    width: 100%;
+  }
+  .card_menu_prix {
+    height: auto;
+    width: 100%;
+  }
+  .card_pres_menu_price {
+    padding: 0 0 0 15px;
+  }
+  .pres_price {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .forces {
+    rotate: none;
+  }
+  .forces_texte {
+    height: auto;
+    font-size: 0.9em;
+  }
+  .CTA button {
+    padding: 7px 30px 7px 30px;
+    margin-bottom: 20px;
+  }
+}
 .display_display {
   width: 100%;
   height: 90vh;
@@ -371,6 +475,23 @@ nav .btn_commander {
   font-size: 18px;
 }
 
+@media screen and (max-width: 376px) {
+  .display_display {
+    height: auto;
+    flex-direction: column;
+    background-position: none;
+  }
+  .display {
+    padding: 20px;
+  }
+  .display > p {
+    text-align: center;
+    font-size: 42px;
+  }
+  .display_liste_ingredients {
+    flex-direction: column;
+  }
+}
 .partager {
   width: 100%;
   height: 100vh;
@@ -379,6 +500,12 @@ nav .btn_commander {
   flex-direction: row;
   gap: 0px;
   align-items: center;
+}
+@media screen and (max-width: 376px) {
+  .partager {
+    height: auto;
+    flex-direction: column;
+  }
 }
 
 .img-salade-traits {
@@ -472,6 +599,41 @@ form p:nth-child(2) {
   height: 135px;
 }
 
+@media screen and (max-width: 376px) {
+  .img-salade-traits img {
+    display: none;
+  }
+  .partager {
+    margin-top: 20px;
+    background-image: url("/images/anh-nguyen-_Uqj5BQb-mw-unsplash.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: auto;
+    widows: 100%;
+  }
+  .traits1 {
+    rotate: 2deg;
+  }
+  .traits2 {
+    rotate: 2deg;
+  }
+  form {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    padding-left: 15px;
+  }
+  form p:nth-child(2) {
+    width: 100%;
+  }
+  form p:nth-child(2) br {
+    display: none;
+  }
+  .infos_user {
+    padding-right: 0;
+  }
+}
 footer {
   width: 100%;
   height: 290px;
@@ -499,6 +661,17 @@ footer {
 .footer_menu a {
   text-decoration: none;
   color: #fff;
+}
+
+@media screen and (max-width: 376px) {
+  footer {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+  .footer_menu p {
+    margin-bottom: 5px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
