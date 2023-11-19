@@ -5,7 +5,7 @@
   font-family: "poppins", sans-serif;
 }
 
-.infos_user button, .CTA button, .card_ingredients .desc_card_ingredients button, .pres_salade .plus, nav .btn_commander {
+.infos_user button, .CTA button, .desc_card_ingredients button, .pres_salade .plus, nav .btn_commander {
   border-style: none;
   font-size: 18px;
   border-radius: 5px;
@@ -37,10 +37,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
   padding: 0 20px 0 20px;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 2;
+  margin: 10px 0 0 0;
 }
 nav .right_side_menu {
   display: flex;
@@ -54,6 +56,19 @@ nav .list_menu {
   gap: 50px;
   list-style: none;
   color: #fff;
+  font-size: 18px;
+}
+nav .list_menu li:nth-child(1) {
+  position: relative;
+  display: inline-block;
+}
+nav .list_menu li:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  width: 50%;
+  border-bottom: 3px solid #fff;
 }
 nav .btn_commander {
   background-color: #fff;
@@ -90,12 +105,16 @@ nav .btn_commander {
   flex-direction: column;
 }
 .title_resto h1 {
-  font-size: 5em;
+  font-size: 6.5em;
   color: #fff;
 }
 .title_resto p {
-  font-size: 18px;
+  font-size: 52px;
   color: #fff;
+  rotate: -9deg;
+  position: absolute;
+  top: 412.5px;
+  right: 399px;
 }
 
 .icons_media {
@@ -113,16 +132,18 @@ nav .btn_commander {
 
 .pres_salade {
   width: 100%;
-  height: 87vh;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   gap: 0px;
   background: url("/images/61842.png");
+  z-index: -1;
   position: relative;
 }
 .pres_salade .text_salade {
-  flex-grow: 1;
-  margin: 20px 0 20px 25px;
+  width: 100%;
+  /* margin: 0px 20px 20px 25px */
+  margin-left: 145px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -131,22 +152,27 @@ nav .btn_commander {
 }
 .pres_salade .text_salade h2 {
   color: #B2D234;
-  font-size: 2em;
+  font-size: 57.2px;
   margin-bottom: 20px;
 }
 .pres_salade .text_salade p {
   color: #606060;
   font-size: 18px;
   margin: 20px 0;
+  width: 500px;
 }
 .pres_salade img {
-  flex-grow: 1;
   object-fit: cover;
+  position: absolute;
+  left: 630px;
+  bottom: -54px;
+  z-index: 0;
 }
 .pres_salade .plus {
   background-color: #B2D234;
   color: #fff;
   padding: 14px 60px 14px 60px;
+  margin-top: 45px;
 }
 
 .card_ingredients {
@@ -156,7 +182,8 @@ nav .btn_commander {
   display: flex;
   justify-content: flex-end;
 }
-.card_ingredients .desc_card_ingredients {
+
+.desc_card_ingredients {
   width: 612px;
   height: auto;
   background-color: rgba(178, 210, 52, 0.8);
@@ -168,20 +195,26 @@ nav .btn_commander {
   justify-content: center;
   flex-direction: column;
 }
-.card_ingredients .desc_card_ingredients button {
+.desc_card_ingredients button {
   background-color: #fff;
   color: #B2D234;
   padding: 14px 60px 14px 60px;
-  margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 20px;
 }
-.card_ingredients .title_card_ingredients {
+.desc_card_ingredients .title_card_ingredients {
   color: #fff;
   font-size: 2.5em;
   margin-bottom: 40px;
   font-weight: 700;
   width: 100%;
 }
-.card_ingredients .desc_ingredients {
+.desc_card_ingredients .desc_ingredients {
   margin-bottom: 40px;
   width: 100%;
   color: #fff;
@@ -189,7 +222,7 @@ nav .btn_commander {
 
 .card_menu_prix {
   width: 100%;
-  height: 120vh;
+  height: 100vh;
   background: url("/images/pattern.png");
   display: flex;
   flex-direction: column;
@@ -204,14 +237,14 @@ nav .btn_commander {
   align-content: center;
   width: 800px;
   height: auto;
-  margin-top: 71px;
+  margin-top: 51px;
   margin-bottom: 40px;
 }
 
 .card_menu_prix_title {
-  font-size: 2em;
+  font-size: 52px;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -224,7 +257,7 @@ nav .btn_commander {
   grid-template-columns: 1fr 1fr;
   width: 100%;
   height: 100%;
-  margin-top: 47px;
+  margin-top: 27px;
 }
 
 .pres_menu_price {
@@ -291,7 +324,7 @@ nav .btn_commander {
 
 .display_display {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background-image: url("/images/louis-hansel-MlPD-AzZYMg-unsplash.png");
   display: flex;
   justify-content: center;
@@ -364,7 +397,7 @@ nav .btn_commander {
 
 .traits1 {
   position: absolute;
-  width: 6px;
+  width: 7px;
   height: 100%;
   background-color: #fff;
 }
@@ -372,7 +405,7 @@ nav .btn_commander {
 .traits2 {
   position: absolute;
   width: 524px;
-  height: 6px;
+  height: 7px;
   background-color: #fff;
 }
 
@@ -409,6 +442,7 @@ form p:nth-child(2) {
   margin-right: auto;
   margin-top: 2em;
   margin-bottom: 20px;
+  font-size: 23.4px;
 }
 
 .box_infos_identity {
