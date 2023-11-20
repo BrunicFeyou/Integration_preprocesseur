@@ -334,15 +334,32 @@ nav .btn_commander {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
+  padding-left: 128px;
 }
 
 .card_pres_menu_price {
-  padding: 0 0 0 128px;
   width: 100%;
+  border: 2px solid transparent;
+  margin-bottom: 24px;
+  padding: 6px 12px;
+  position: relative;
 }
-.card_pres_menu_price p {
+.card_pres_menu_price > p {
   width: 275px;
   color: #606060;
+}
+.card_pres_menu_price.special {
+  border-color: #B2D234;
+}
+.card_pres_menu_price.special::before {
+  content: "La plus vendue !";
+  background-color: #B2D234;
+  color: #fff;
+  position: absolute;
+  top: -25px;
+  right: -1.5px;
+  padding: 2px 4px;
+  font-size: 14px;
 }
 
 .card_pres_menu_price > div {
