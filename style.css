@@ -545,7 +545,7 @@ form p:nth-child(1) {
   font-size: 52px;
   color: #B2D234;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 form p:nth-child(2) {
   font-size: 18px;
@@ -581,7 +581,7 @@ form p:nth-child(2) {
 .box_infos {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 7px;
   color: #606060;
   font-size: 18px;
   flex-grow: 1;
